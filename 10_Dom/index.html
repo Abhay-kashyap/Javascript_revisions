@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Best JS Course </h1>
+    <p>Understanding The Dom Tree Structure </p>
+    <hr />
+    <p>It's easy.Helps JS to communicate with HTML</p>
+
+    <script>
+
+        let parent=document;
+        let bodyEle=document.body;
+        let headEle=document.head;
+        // console.log(headEle)
+        // let bodyChild=bodyEle.childNodes;
+        // let bodyChild=bodyEle.children;
+        let firstEle=bodyEle.firstElementChild
+        // let lastChild=bodyEle.lastChild;
+        let nextSibling=firstEle.nextElementSibling;
+        let perivousSibiling=nextSibling.previousElementSibling;
+        let parentNod=perivousSibiling.parentNode;
+        console.log(parentNod);
+    </script>
+</body>
+</html>
