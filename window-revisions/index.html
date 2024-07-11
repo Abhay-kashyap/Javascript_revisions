@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background: #000;
+            color: aliceblue;
+        }
+        button{
+            background-color: rgb(243, 243, 90);
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Window Obj</h1>
+    <!-- Start Window Property  -->
+    <button onclick="window.open('https://github.com/Abhay-kashyap/git-practices','_blank')">navigate</button>
+    <!-- end window property -->
+    
+    <!-- start history -->
+    <h1>javascript history object</h1>
+    <button onclick="window.history.back()">go back</button>
+      <button onclick="window.history.forward()">go forward</button>
+      <button onclick="history.go(-1)">move backward or forward</button>
+
+      <!-- end history -->
+       <!-- start with location object -->
+        <h1>Javascript location Object</h1>
+        <button onclick="window.location.reload()">Reload the page</button>
+        <button onclick="window.location.replace('https://github.com/Abhay-kashyap/git-practices')">Navigate Page using replace </button>
+        <button onclick="location.assign('https://github.com/Abhay-kashyap/git-practices')">navigate page with assign</button>
+        <!-- end location object -->
+         <h1>Javascript Screen Object</h1>
+         <p>we will see in console</p>
+ <script>
+        alert('welcome to the js course');
+     </script>
+</body>
+</html>
