@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;      
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20;
+            margin: 50px;
+            padding: 50px;
+           
+        }
+        
+        
+       
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Simple Dom ToDo App </h1>
+        <input type="text" id="inputfield"   />
+        <button class="btn" >click me</button>
+        <div class="todoListsElem">
+            <!-- <p id="todoFirst"></p> -->
+        </div> 
+    </div>
+    <script>
+        let inputElem=document.getElementById('inputfield');
+        let clickBtn=document.querySelector('.btn');
+        let todoElem=document.querySelector(".todoListsElem");
+        // let todoFirst=document.querySelector('#todoFirst')
+        const addTodo=()=>{
+            // todoFirst.innerText=inputElem.value
+            // console.log(inputElem.value)
+            let pELem=document.createElement('p');
+            pELem.textContent=inputElem.value;
+            todoElem.append(pELem);
+            // console.log(pELem);
+            inputElem.value=""
+            
+
+        }
+        clickBtn.addEventListener('click',()=>{
+            addTodo();
+        })
+        todoElem.addEventListener('click',(e)=>{
+            console.log(e.target)
+            let curElm=e.target;
+            curElm.remove()
+        })
+    </script>
+</body>
+</html>

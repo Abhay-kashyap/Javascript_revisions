@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="heading">DOM API</h1>
+      <ul class="list-of-nodes">
+        <li>1 Node</li>
+        <li>2 Node</li>
+        <li>3 Node</li>
+        <!-- li 4 th node -->
+        <li>4 Node</li>
+        <li style="display: none">5 Node</li>
+      </ul>
+    </div>
+    <div>
+        <h1>DOM API</h1>
+        <input type="text" />
+        <button>click me</button>
+        <div class="value"></div>
+    </div>
+    <script>
+        let findElementById=document.getElementById("heading")
+        // let findElementById=document.getElementById("#heading");//not use # by id
+        const findElementByClassName=document.getElementsByClassName("list-of-nodes")
+        // console.log(...findElementByClassName)
+        // for(let element of findElementByClassName){
+        //     console.log(element.innerHTML);
+        //     console.log(element.innerText);
+        //     console.log(element.textContent);
+        // }
+        // console.log(findElementById.innerHTML)
+        // console.log(findElementById.innerText)
+        // console.log(findElementById.textContent)
+        // const getElementByTagName=document.getElementsByTagName("li")
+        // console.log(getElementByTagName)
+        // for (let e of getElementByTagName){
+            // console.log(e);
+        // }
+        const findElementByQuerySelector=document.querySelector("#heading");
+        // console.log(findElementByQuerySelector.innerText='learning dom in Javascript');
+
+        const findElementByQuerySelectorAll=document.querySelectorAll('li');
+        // console.log(findElementByQuerySelectorAll)
+        findElementByQuerySelectorAll.forEach((currEle)=> console.log(currEle))
+    </script>
+  </body>
+</html>
