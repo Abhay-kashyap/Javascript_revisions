@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Js course</title>
+</head>
+<body>
+    <h1>practice dom manipulation</h1>
+    <p>Understanding the dom Tree structure</p>
+    <hr />
+    <p>It's easy.Helps JS to communicate with HTML</p>
+    <script>
+        let parent=document;
+        let bodyElement=document.body;
+        let headElement=document.head;
+        // let bodyChild=bodyElement.childNodes // it gives nodelist  
+        let bodyChild=bodyElement.children
+
+        // first child
+        let firstChild=bodyElement.firstElementChild;
+        console.log(firstChild);
+
+        // last child
+        // let lastchild=bodyElement.lastChild;
+        // console.log(lastchild);
+        // find next siblings 
+        let nextSibling=firstChild.nextElementSibling;
+
+
+        // find pervious siblings
+        let perviousSibling=nextSibling.previousElementSibling;
+        console.log(perviousSibling)
+        // parent
+        let parents=perviousSibling.parentNode;
+        console.log(parents)
+    </script>
+</body>
+</html>
