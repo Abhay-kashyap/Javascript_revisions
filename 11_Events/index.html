@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            height: 100vh;
+            margin: 20px;
+            background-color: #000;
+        }
+        h1{
+            color: white;
+            font-style: bold;
+        }
+        button{
+            color: white;
+            background-color: rgba(196, 196, 40, 0.833);
+            font-size: 20px;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid black;
+            /* outline: none; */
+            border-radius: 20px;
+        }
+        button:hover{
+            background-color: #fff;
+            color: rgba(196, 196, 40, 0.833);
+        }
+    </style>
+</head>
+<body>
+    <!-- Inline Events -->
+    <h1>Inline Events</h1>
+    <button onclick="alert('welcome')">Greeting</button>
+    <button ondblclick="alert('welcome')">Greeting Again</button>
+    <button onmouseover="alert('welcome again')">Greeting Again</button>
+    <!-- Dom Event Handler -->
+     <h1>Dom Event Handler</h1>
+     <button id="myBtn">Greeting</button>
+     <button id="myBtn1">Greeting Again</button>
+
+     <!-- Add Event Listner Event handler -->
+      <h1>Add Event Listner Event handler</h1>
+      <button id="myBtn2">Greeting</button>
+      <button id="myBtn3">Greeting Again</button>
+      <script>
+        document.getElementById('myBtn').onclick=()=>{
+            alert('welcome')
+        }
+        document.getElementById('myBtn1').onclick=function(){
+            alert('welcome Again')
+        }
+        // Addevent Listener
+        let mybtn2=document.querySelector('#myBtn2');
+        mybtn2.addEventListener('click',()=>{
+            alert('welcome to study')
+        })
+        document.querySelector('#myBtn3').addEventListener('mouseover',()=>{
+            alert('welcome to study again')
+        })
+      </script>
+</body>
+</html>
