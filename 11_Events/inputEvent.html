@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            margin-top: 12em;
+        }
+        #myInput{
+            background: rgb(234, 234, 101);
+            color: black;
+            margin: 40px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <section>
+        <input type="text" name="username" id="myInput" placeholder="type something ...." autocomplete="off" />
+        <div class="para">
+            <p class="inputValue">Input Value</p>
+            <p class="inputName">Input name</p>
+            <p class="inputType">Input Type</p>
+            <p class="EventType">Input Value</p>
+        </div>
+    </section>
+    <script>
+        function handleInput(e){
+            document.querySelector('.inputValue').textContent=`Input Value: ${e.target.value}`;
+            document.querySelector('.inputName').textContent=`Input Name: ${e.target.name}`;
+            document.querySelector('.inputType').textContent=`Input Type: ${e.inputType}`;
+            document.querySelector('.EventType').textContent=`event Type: ${e.type}`;
+            // console.log(e.target.value);
+            // console.log(e.target.name);
+            // console.log(e.inputType);
+            // console.log(e.type)
+        }
+        let inputEle=document.getElementById('myInput');
+        // inputEle.addEventListener('input',handleInput)
+        inputEle.addEventListener('change',handleInput)
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <input type="text" id="myInput" placeholder="type something..."/>
+        <div class="output">
+            <p class="keyPressed">key pressed</p>
+            <p class="keyCode">key code</p>
+            <p class="charCode">Char codeAt</p>
+            <p class="eventType">Event Type</p>
+        </div>
+    </div>
+    <script>
+        const handleKeyPress=(e)=>{
+            console.log(e);
+            document.querySelector('.keyPressed').textContent=`key pressed : ${e.key}`;
+            document.querySelector('.keyCode').textContent =`key code : ${e.code}`;
+            document.querySelector(".charCode").textContent=`Char codeAt : ${e.key.charCodeAt(0)}`;
+            document.querySelector('.eventType').textContent=`eventType : ${e.type}`;
+            console.log('Event type' ,e.type)
+        }
+        let myInput=document.getElementById('myInput');
+        myInput.addEventListener('keyup' ,handleKeyPress)
+    </script>
+    </body>
+</html>
