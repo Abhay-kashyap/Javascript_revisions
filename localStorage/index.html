@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Stoarge Topic Learn</h1>
+    <script >
+        localStorage.setItem('hello','world1')
+        localStorage.setItem('hello1','world2')
+       localStorage.getItem('hello1')
+        // localStorage.clear()
+        localStorage.removeItem('hello')
+    //    if you want to store the object in local stroage use json.stringify method
+    const user={
+        name:'akshay'
+    }
+    // String(user)
+    // localStorage.setItem('user',user)
+    // localStorage.getItem('user')
+    localStorage.setItem('user',JSON.stringify(user))
+    // when we getting the element we come string 
+    // localStorage.getItem('user')
+    // we use to solve that we get object then we pass to json.parse method get the object
+    JSON.parse(localStorage.getItem('user'))
+    </script>
+</body>
+</html>
